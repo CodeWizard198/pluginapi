@@ -1,5 +1,6 @@
 package pluginapi
 
 type Plugin interface {
-	Execute() error
+	Name() string          // 插件名
+	Execute() (any, error) // 具体的执行函数
 }
